@@ -4,6 +4,9 @@
 .contStyle{
   width: 400px; height: 400px; margin:0 auto;
 }
+.contStyle1{
+  width: 406px; height: 100px; margin:0 auto;
+}
 .equalBtn{
   display: block;height: 213px; width: 46px;margin: 5px 0;
 }

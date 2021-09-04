@@ -1,6 +1,20 @@
 <h1 class="text-center">Application 1 : Calculatrice</h1>
 
-<div class="container border p-3 my-3 contStyle">
+<div class="container p-3 my-3 contStyle1">
+  <div class="row border p-3 my-3">
+    <div class="col-4"><button type="button" class="btn btn-primary" (click)="getColor('blue')">blue</button></div>
+    <div class="col-4"><button type="button" class="btn btn-danger" (click)="getColor('red')">rouge</button></div>
+    <div class="col-4"><button type="button" class="btn btn-secondary" (click)="getColor('white')">blanc</button></div>
+  </div>
+</div>
+
+<div class="container p-3 my-3 contStyle1">
+  <div class="row border p-3 my-3">
+    <input #inputColor type="text"  class="form-control" (input)="getColor(inputColor.value)" >
+  </div>
+</div>
+
+<div class="container border p-3 my-3 contStyle" [ngStyle]="{'background-color': color}">
 
 
       <div class="row">
@@ -32,7 +46,7 @@
           </div>
           <div class="row">
             <div class="col-4"><button type="button" class="btn btn-outline-dark squareBtn p-2" (click)="getNumber('0')">0</button></div>
-            <div class="col-4"><button type="button" class="btn btn-outline-dark squareBtn p-2" (click)="getOp('.')">.</button></div>
+            <div class="col-4"><button type="button" class="btn btn-outline-dark squareBtn p-2" (click)="getP()">.</button></div>
             <div class="col-4"><button type="button" class="btn btn-danger squareBtn p-2"  (click)="reset()">AC</button></div>
           </div>
         </div>
